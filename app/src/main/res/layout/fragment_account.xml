@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activity.RegisterActivity"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:layout_height="150dp"
+        android:layout_width="420dp"
+        android:src="@drawable/image"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:letterSpacing="0.03"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:textColor="#0d6e6a"
+        android:text="Profile"/>
+
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:textColor="#fff"
+            android:textColorHint="#eee"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:hint="Email"
+            android:visibility="invisible"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:id="@+id/txtId"
+            android:background="@drawable/rounded_corner"
+            android:textSize="17sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:hint="Email">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:enabled="false"
+                android:background="@android:color/transparent"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtFullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:hint="Full Name">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:background="@android:color/transparent"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:hint="Phone">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:background="@android:color/transparent"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:hint="Address">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:background="@android:color/transparent"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:gravity="center" >
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEditAccount"
+                android:layout_height="50dp"
+                android:layout_width="250dp"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:textColor="#FFF"
+                android:text="Update Profile"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/button"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
+
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    tools:context=".activity.LoginActivity">-->
+
+<!--    <LinearLayout-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+<!--        <ImageView-->
+<!--            android:layout_weight="4"-->
+<!--            android:src="@drawable/ic_login"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="0dp" />-->
+<!--        <View-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="0dp"/>-->
+<!--    </LinearLayout>-->
+
+
+<!--    <LinearLayout-->
+<!--        android:gravity="center"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical">-->
+
+<!--        <TextView-->
+<!--            android:layout_margin="25dp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="36dp"-->
+<!--            android:textColor="#fff"-->
+<!--            android:text="Cập nhật thông tin"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content" />-->
+
+<!--        <EditText-->
+<!--            android:textColor="#fff"-->
+<!--            android:textColorHint="#eee"-->
+<!--            android:paddingStart="10dp"-->
+<!--            android:paddingLeft="10dp"-->
+<!--            android:hint="Email"-->
+<!--            android:visibility="invisible"-->
+<!--            android:layout_marginLeft="20dp"-->
+<!--            android:layout_marginRight="20dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="10dp"-->
+<!--            android:id="@+id/txtId"-->
+<!--            android:background="@drawable/rounded_corner"-->
+<!--            android:textSize="17sp" />-->
+
+<!--        <EditText-->
+<!--            android:textColor="#fff"-->
+<!--            android:textColorHint="#eee"-->
+<!--            android:paddingStart="10dp"-->
+<!--            android:paddingLeft="10dp"-->
+<!--            android:hint="Email"-->
+<!--            android:enabled="false"-->
+<!--            android:layout_marginLeft="20dp"-->
+<!--            android:layout_marginRight="20dp"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="45dp"-->
+<!--            android:id="@+id/txtEmail"-->
+<!--            android:background="@drawable/rounded_corner"-->
+<!--            android:textSize="17sp" />-->
+
+<!--        <EditText-->
+<!--            android:textColor="#fff"-->
+<!--            android:textColorHint="#eee"-->
+<!--            android:paddingStart="10dp"-->
+<!--            android:paddingLeft="10dp"-->
+<!--            android:hint="Fullname"-->
+<!--            android:layout_marginLeft="20dp"-->
+<!--            android:layout_marginRight="20dp"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="45dp"-->
+<!--            android:id="@+id/txtFullName"-->
+<!--            android:background="@drawable/rounded_corner"-->
+<!--            android:textSize="17sp" />-->
+
+<!--        <EditText-->
+<!--            android:textColor="#fff"-->
+<!--            android:textColorHint="#eee"-->
+<!--            android:paddingStart="10dp"-->
+<!--            android:paddingLeft="10dp"-->
+<!--            android:hint="Phone"-->
+<!--            android:layout_marginLeft="20dp"-->
+<!--            android:layout_marginRight="20dp"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="45dp"-->
+<!--            android:id="@+id/txtPhone"-->
+<!--            android:background="@drawable/rounded_corner"-->
+<!--            android:textSize="17sp" />-->
+
+<!--        <EditText-->
+<!--            android:textColor="#fff"-->
+<!--            android:textColorHint="#eee"-->
+<!--            android:paddingStart="10dp"-->
+<!--            android:paddingLeft="10dp"-->
+<!--            android:hint="Address"-->
+<!--            android:layout_marginLeft="20dp"-->
+<!--            android:layout_marginRight="20dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="45dp"-->
+<!--            android:id="@+id/txtAddress"-->
+<!--            android:background="@drawable/rounded_corner"-->
+<!--            android:textSize="17sp" />-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_margin="20dp" >-->
+<!--            <Button-->
+<!--                android:paddingRight="20dp"-->
+<!--                android:paddingLeft="20dp"-->
+<!--                android:background="#233CDD"-->
+<!--                android:text="Cập nhật"-->
+<!--                android:textColor="#fff"-->
+<!--                android:id="@+id/btnEditAccount"-->
+<!--                android:layout_width="150dp"-->
+<!--                android:layout_height="35dp" />-->
+<!--        </LinearLayout>-->
+<!--    </LinearLayout>-->
+
+<!--</RelativeLayout>-->
