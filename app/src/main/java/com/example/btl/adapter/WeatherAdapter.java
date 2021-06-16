@@ -46,24 +46,18 @@ public class WeatherAdapter extends RecyclerView.Adapter<WeatherAdapter.WeatherV
     @Override
     public void onBindViewHolder(@NonNull WeatherViewHolder holder, int position) {
         WeatherDay s = list.get(position);
-        holder.txtDateTime.setText(new SimpleDateFormat("dd-MM-yyyy").format(new Date(s.getDt()*1000)));
+        holder.txtDateTime.setText(new SimpleDateFormat("dd-MM-yyyy").format(new Date(s.getDt()*1000L)));
         holder.txtStatus.setText(s.getWeather().get(0).getMain());
-        holder.txtTemp.setText(s.getTemp().getDay().toString());
-        holder.txtMaxTemp.setText(s.getTemp().getMax().toString());
-        holder.txtMinTemp.setText(s.getTemp().getMin().toString());
-        holder.cardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                Intent intent = new Intent(v.getContext(), ReadNewsActivity.class);
-//                intent.putExtra("link", link);
-//                v.getContext().startActivity(intent);
-            }
-        });
+        holder.txtTemp.setText("Temp: " +  s.getTemp().getDay().toString() + "°C");
+        holder.txtMaxTemp.setText("Max: " + s.getTemp().getMax().toString() + "°C");
+        holder.txtMinTemp.setText("Min: " +s.getTemp().getMin().toString() + "°C");
     }
 
     @Override
     public int getItemCount() {
-        return list.size();
+        if (list != null)
+            return list.size();
+        else return 0;
     }
 
     class WeatherViewHolder extends RecyclerView.ViewHolder {

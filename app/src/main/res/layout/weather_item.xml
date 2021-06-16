@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:text="Date time: "
             android:id="@+id/txtDateTime"
-            android:textSize="24dp"
+            android:textSize="20dp"
             />
 
         <TextView
@@ -35,7 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Trang thai: "
-            android:textSize="24dp"
+            android:textSize="20dp"
             android:id="@+id/txtStatus"
             />
     </LinearLayout>
@@ -71,6 +71,7 @@
                    android:layout_gravity="center"
                    android:gravity="center"
                    android:text="Temp: 26C"
+                   android:textSize="16dp"
                    android:id="@+id/txtTemp"
                    />
            </LinearLayout>
@@ -93,6 +94,7 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:text="Max Temp: 26C"
+                    android:textSize="16dp"
                     android:id="@+id/txtMaxTemp"
                     />
             </LinearLayout>
@@ -113,6 +115,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
+                    android:textSize="16dp"
                     android:text="Min Temp: 26C"
                     android:id="@+id/txtMinTemp"
                     />
