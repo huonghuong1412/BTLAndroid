@@ -78,23 +78,19 @@ public class WeatherFragment extends Fragment {
                     address.setText(weather.getName() + ", " + weather.getSys().getCountry());
                     List<WeatherItem> items = weather.getWeather();
                     status.setText(items.get(0).getMain());
-                    double doC = (double) Math.round((weather.getMain().getTemp()*10)/100);
-                    double doCMax = (double) Math.round((weather.getMain().getTemp_max()*10)/100);
-                    double doCMin = (double) Math.round((weather.getMain().getTemp_min()*10)/100);
-                    double feels = (double) Math.round((weather.getMain().getFeels_like()*10)/100);
                     SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
                     Date date = new Date();
                     String dateTime = formatter.format(date);
                     updated_at.setText(dateTime);
-                    temp.setText(doC + "°C");
-                    temp_max.setText("Max Temp: " + doCMax + "°C");
-                    temp_min.setText("Min Temp: " + doCMin + "°C");
+                    temp.setText(weather.getMain().getTemp() + "°C");
+                    temp_max.setText("Max Temp: " + weather.getMain().getTemp_max() + "°C");
+                    temp_min.setText("Min Temp: " + weather.getMain().getTemp_min() + "°C");
                     sunrise.setText(new SimpleDateFormat("hh:mm a", Locale.ENGLISH).format(new Date(weather.getSys().getSunrise()*1000)));
                     sunset.setText(new SimpleDateFormat("hh:mm a", Locale.ENGLISH).format(new Date(weather.getSys().getSunset()*1000)));
                     wind.setText(weather.getWind().getSpeed().toString());
                     pressure.setText(weather.getMain().getPressure().toString());
                     humidity.setText(weather.getMain().getHumidity().toString());
-                    about.setText(feels + "°C");
+                    about.setText(weather.getMain().getFeels_like() + "°C");
                 }
             }
             @Override

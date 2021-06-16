@@ -8,17 +8,21 @@ public class Weather {
     private Wind wind;
     private Sys sys;
     private Main main;
+    private Coord coord;
     private String name;
+    private Integer dt;
 
     public Weather() {
     }
 
-    public Weather(List<WeatherItem> weather, Wind wind, Sys sys, Main main, String name) {
+    public Weather(List<WeatherItem> weather, Wind wind, Sys sys, Main main, Coord coord, String name, Integer dt) {
         this.weather = weather;
         this.wind = wind;
         this.sys = sys;
         this.main = main;
+        this.coord = coord;
         this.name = name;
+        this.dt = dt;
     }
 
     public List<WeatherItem> getWeather() {
@@ -53,11 +57,27 @@ public class Weather {
         this.main = main;
     }
 
+    public Coord getCoord() {
+        return coord;
+    }
+
+    public void setCoord(Coord coord) {
+        this.coord = coord;
+    }
+
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Integer getDt() {
+        return dt;
+    }
+
+    public void setDt(Integer dt) {
+        this.dt = dt;
     }
 }
