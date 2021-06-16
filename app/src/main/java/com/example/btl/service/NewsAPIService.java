@@ -18,7 +18,8 @@ public interface NewsAPIService {
     // http://10.0.2.2:3001/news
 
     NewsAPIService newsAPIService = new Retrofit.Builder()
-            .baseUrl("http://10.0.2.2:3001")
+//            .baseUrl("http://10.0.2.2:3001")
+            .baseUrl("https://60bc864cb8ab37001759f30b.mockapi.io")
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build()
             .create(NewsAPIService.class);

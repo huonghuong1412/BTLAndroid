@@ -8,6 +8,7 @@
     >
 
         <ImageButton
+            android:id="@+id/imageButton"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/ic_baseline_arrow_back_24"

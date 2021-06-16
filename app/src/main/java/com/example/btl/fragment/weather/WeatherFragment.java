@@ -1,5 +1,6 @@
 package com.example.btl.fragment.weather;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.btl.R;
+import com.example.btl.activity.NextWeatherActivity;
 import com.example.btl.adapter.NewsViewAdapter;
 import com.example.btl.model.News;
 import com.example.btl.model.Weather;
@@ -36,7 +38,7 @@ public class WeatherFragment extends Fragment {
     // sunrise, sunset, wind, pressure, humidity, about
     private TextView address, status, temp, temp_min, temp_max, sunrise, sunset, wind, pressure, humidity, about, updated_at;
     private TextInputLayout txtSearch;
-    private Button btnSearch;
+    private Button btnSearch, btnNext;
     private Weather weather;
     private String q;
 
@@ -46,6 +48,7 @@ public class WeatherFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_weather, container, false);
         txtSearch = v.findViewById(R.id.txtSearch);
         btnSearch = v.findViewById(R.id.btnSearch);
+        btnNext = v.findViewById(R.id.btnNext);
         address = v.findViewById(R.id.address);
         status = v.findViewById(R.id.status);
         temp = v.findViewById(R.id.temp);
@@ -66,6 +69,15 @@ public class WeatherFragment extends Fragment {
                 callAPI(q);
             }
         });
+        btnNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), NextWeatherActivity.class);
+                intent.putExtra("q", q);
+                startActivity(intent);
+            }
+        });
+
         return v;
     }
 

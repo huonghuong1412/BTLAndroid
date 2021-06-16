@@ -42,8 +42,15 @@
                    android:background="@drawable/ic_baseline_search_24"
                    android:id="@+id/btnSearch"
                    />
-
            </LinearLayout>
+
+            <Button
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="Next 7 days"
+                android:id="@+id/btnNext"
+                />
+
             <TextView
                 android:id="@+id/address"
                 android:layout_width="wrap_content"
